@@ -1995,7 +1995,7 @@ function loadLoveWars(container) {
           <div class="absolute inset-0 w-20 h-20 md:w-24 md:h-24 -left-2 -top-2 md:-left-3 md:-top-3 border-2 border-red-500/20 rounded-full animate-ping"></div>
           
           <div class="relative w-16 h-16 md:w-18 md:h-18 bg-black border border-red-500 rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.2)] overflow-hidden">
-              <img src="/images/games/tuko.jpg" alt="tukoo" class="w-full h-full object-cover opacity-80 transition-opacity">
+              <img src="images/games/tuko.jpg" alt="tukoo" class="w-full h-full object-cover opacity-80 transition-opacity">
               <div class="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/10 to-transparent animate-scanline pointer-events-none"></div>
           </div>
           
@@ -2871,3 +2871,4 @@ document.addEventListener("DOMContentLoaded", () => {
       player.seekTo(player.getDuration() * percentage, true);
     });
 });
+
