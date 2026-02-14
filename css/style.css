@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.handwritten {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Reusable Keypad Button Style */
+.key-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    background-color: white;
+    border: 2px solid #fbcfe8; /* pink-200 */
+    color: #ec4899; /* pink-500 */
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.key-btn:hover {
+    background-color: #ec4899;
+    color: white;
+}
+
+/* Shake animation for wrong password */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Add this to your existing style.css */
+.otp-box.active {
+    border-color: #ec4899; /* pink-500 */
+    background-color: #fdf2f8; /* pink-50 */
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+    transform: scale(1.05);
+}
+
+
+/* Add this to style.css */
+.otp-box:not(:empty) {
+    animation: pop 0.1s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1.05); }
+}
+
+.tantrum-text {
+    position: fixed;
+    z-index: 100;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #be123c; /* rose-700 */
+    background: white;
+    padding: 4px 10px;
+    border-radius: 99px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    pointer-events: none;
+    animation: tantrum-pop 1s ease-out forwards;
+}
+
+@keyframes tantrum-pop {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    20% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+    100% { transform: scale(1) translateY(-50px); opacity: 0; }
+}
+
+
+.sweet-pop-text {
+    position: fixed;
+    z-index: 40; /* Behind the modal, but above the card */
+    font-family: 'Pacifico', cursive;
+    color: #f472b6; /* pink-400 */
+    font-size: 1.2rem;
+    pointer-events: none;
+    text-shadow: 1px 1px 0px white;
+    animation: sweet-float 2s ease-in-out forwards;
+}
+
+@keyframes sweet-float {
+    0% { transform: scale(0); opacity: 0; }
+    20% { transform: scale(1); opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-40px) scale(1.1); opacity: 0; }
+}
+
+
+
+
+
+
+/* Small, cute mwuah text */
+.mwuah-text {
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #db2777;
+    font-size: 1.5rem; /* Smaller size */
+    text-shadow: 2px 2px 0px white;
+    pointer-events: none;
+    animation: mwuah-pop-random 0.8s ease-out forwards;
+    z-index: 100;
+}
+
+@keyframes mwuah-pop-random {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) translateY(-20px); opacity: 0; }
+}
+
+
+
